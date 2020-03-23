@@ -1,0 +1,20 @@
+{
+  "name": "urban-octo-lamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debauchery1st/urban-octo-lamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debauchery1st/urban-octo-lamp/issues"
+  },
+  "homepage": "https://github.com/debauchery1st/urban-octo-lamp#readme"
+}
