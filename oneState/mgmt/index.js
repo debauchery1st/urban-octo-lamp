@@ -30,8 +30,8 @@ module.exports = (function() {
     };
   }
   /**
-   * @param none
-   * create instance
+   * @param {object} obj key value pair to add
+   *
    * @returns {object} new mgmt.instance
    */
   function addKeyValuePair(obj, stamp = false) {
@@ -39,6 +39,7 @@ module.exports = (function() {
     if (!Object.keys(obj).length > 0) {
       console.log("only {key: value} pairs");
       return false;
+      none;
     }
     instance.data = { ...clone, ...obj };
     if (stamp) ts();

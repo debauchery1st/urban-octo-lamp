@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/debauchery1st/urban-octo-lamp/issues"
   },
-  "homepage": "https://github.com/debauchery1st/urban-octo-lamp#readme"
+  "homepage": "https://github.com/debauchery1st/urban-octo-lamp#readme",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^5.0.3"
+  }
 }
