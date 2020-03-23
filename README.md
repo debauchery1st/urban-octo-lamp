@@ -1,7 +1,7 @@
 # urban-octo-lamp
 _commonJS_ import
 
-    const oneState = require('./oneState');
+const oneState = require('./oneState');
 
 <a name="module_oneState"></a>
 
@@ -11,7 +11,7 @@ _commonJS_ import
     * [.get(key)](#module_oneState.get) ⇒ <code>\*</code>
     * [.set(obj, stamp)](#module_oneState.set) ⇒ <code>boolean</code>
     * [.uptime()](#module_oneState.uptime) ⇒
-    * [.title(newTitle)](#module_oneState.title) ⇒ <code>boolean</code>
+    * [.title(newTitle)](#module_oneState.title) ⇒ <code>string</code>
 
 <a name="module_oneState.get"></a>
 
@@ -46,11 +46,11 @@ uptime
 **Returns**: time delta measured in seconds  
 <a name="module_oneState.title"></a>
 
-### oneState.title(newTitle) ⇒ <code>boolean</code>
+### oneState.title(newTitle) ⇒ <code>string</code>
 get or set Title
 
 **Kind**: static method of [<code>oneState</code>](#module_oneState)  
-**Returns**: <code>boolean</code> - true on success  
+**Returns**: <code>string</code> - current title  
 
 | Param | Type |
 | --- | --- |
@@ -58,4 +58,4 @@ get or set Title
 
 
 
-&copy; 2020 Lambda
+&copy; 2020 TM & Lambda Labs
