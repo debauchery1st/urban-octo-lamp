@@ -1,33 +1,39 @@
 # urban-octo-lamp
-
 _commonJS_ import
 
-    const sharedState = require("./oneState");
-## Functions
+    const oneState = require('./oneState');
 
-<dl>
-<dt><a href="#set">set(obj, stamp)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#uptime">uptime(none)</a> ⇒ <code>object</code></dt>
-<dd></dd>
-</dl>
+<a name="module_oneState"></a>
 
-<a name="set"></a>
+## oneState : <code>object</code>
+obj
 
-## set(obj, stamp) ⇒ <code>boolean</code>
-**Kind**: global function  
+
+* [oneState](#module_oneState) : <code>object</code>
+    * [~set(obj, stamp)](#module_oneState..set) ⇒ <code>boolean</code>
+    * [~uptime(none)](#module_oneState..uptime) ⇒ <code>object</code>
+
+<a name="module_oneState..set"></a>
+
+### oneState~set(obj, stamp) ⇒ <code>boolean</code>
+obj
+
+**Kind**: inner method of [<code>oneState</code>](#module_oneState)  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | obj | <code>object</code> |  | *required |
 | stamp | <code>boolean</code> | <code>false</code> | timestamp this call |
 
-<a name="uptime"></a>
+<a name="module_oneState..uptime"></a>
 
-## uptime(none) ⇒ <code>object</code>
-**Kind**: global function  
+### oneState~uptime(none) ⇒ <code>object</code>
+**Kind**: inner method of [<code>oneState</code>](#module_oneState)  
 
 | Param | Description |
 | --- | --- |
 | none | returns time delta in seconds |
 
+
+
+&copy; 2020 Lambda
