@@ -54,14 +54,31 @@ module.exports = (function() {
     return new Object({
       accessed: 0,
       text: "it's not magic",
+      title: "your app",
       data: {
+        title: newTitle => title(newTitle),
         created: Date.now()
       },
       uptime: timedelta,
       insert: addKeyValuePair
     });
   }
+  /**
+   * title
+   * @param {*} newTitle
+   */
+  function title(newTitle) {
+    if (newTitle) {
+      instance.title = newTitle;
+    }
+    return instance.title;
+  }
+
   return {
+    /**
+     * global point of access
+     * @returns accessible instance
+     */
     getInstance: function() {
       if (!instance) instance = createInstance();
       ts(); // timestamp

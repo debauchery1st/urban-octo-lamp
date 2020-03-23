@@ -1,16 +1,21 @@
 /**
  * @module oneState
- * @type {object} obj
- * @static
  */
 const mgmt = require("./mgmt").getInstance();
+/**
+ * get
+ * @param {string} key *optional
+ * @returns {*} state or *state.key value
+ * @static
+ */
 const get = key => {
   return key ? mgmt.data[key] : mgmt.data;
 };
 /**
- * @param {object} obj *required
- * @type {object} obj
- * @param {boolean} stamp timestamp this call
+ * set
+ * @param {Object} obj *required
+ * @param {boolean} stamp timestamp this call?
+ * @static
  * @returns {boolean}
  */
 const set = (obj, stamp = false) => {
@@ -19,14 +24,25 @@ const set = (obj, stamp = false) => {
   return mgmt.insert(obj, stamp);
 };
 /**
- * @param none returns time delta in seconds
- * @returns {object}
+ * uptime
+ * @static
+ * @returns time delta measured in seconds
  */
 const uptime = () => {
   return mgmt.uptime();
 };
+/**
+ * get or set Title
+ * @param {string} newTitle
+ * @static
+ * @returns {string} current title
+ */
+const title = newTitle => {
+  return mgmt.data.title(newTitle);
+};
 module.exports = {
   uptime,
   get,
-  set
+  set,
+  title
 };

@@ -5,34 +5,56 @@ _commonJS_ import
 
 <a name="module_oneState"></a>
 
-## oneState : <code>object</code>
-obj
+## oneState
 
+* [oneState](#module_oneState)
+    * [.get(key)](#module_oneState.get) ⇒ <code>\*</code>
+    * [.set(obj, stamp)](#module_oneState.set) ⇒ <code>boolean</code>
+    * [.uptime()](#module_oneState.uptime) ⇒
+    * [.title(newTitle)](#module_oneState.title) ⇒ <code>boolean</code>
 
-* [oneState](#module_oneState) : <code>object</code>
-    * [~set(obj, stamp)](#module_oneState..set) ⇒ <code>boolean</code>
-    * [~uptime(none)](#module_oneState..uptime) ⇒ <code>object</code>
+<a name="module_oneState.get"></a>
 
-<a name="module_oneState..set"></a>
+### oneState.get(key) ⇒ <code>\*</code>
+get
 
-### oneState~set(obj, stamp) ⇒ <code>boolean</code>
-obj
+**Kind**: static method of [<code>oneState</code>](#module_oneState)  
+**Returns**: <code>\*</code> - state or *state.key value  
 
-**Kind**: inner method of [<code>oneState</code>](#module_oneState)  
+| Param | Type | Description |
+| --- | --- | --- |
+| key | <code>string</code> | *optional |
+
+<a name="module_oneState.set"></a>
+
+### oneState.set(obj, stamp) ⇒ <code>boolean</code>
+set
+
+**Kind**: static method of [<code>oneState</code>](#module_oneState)  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| obj | <code>object</code> |  | *required |
-| stamp | <code>boolean</code> | <code>false</code> | timestamp this call |
+| obj | <code>Object</code> |  | *required |
+| stamp | <code>boolean</code> | <code>false</code> | timestamp this call? |
 
-<a name="module_oneState..uptime"></a>
+<a name="module_oneState.uptime"></a>
 
-### oneState~uptime(none) ⇒ <code>object</code>
-**Kind**: inner method of [<code>oneState</code>](#module_oneState)  
+### oneState.uptime() ⇒
+uptime
 
-| Param | Description |
+**Kind**: static method of [<code>oneState</code>](#module_oneState)  
+**Returns**: time delta measured in seconds  
+<a name="module_oneState.title"></a>
+
+### oneState.title(newTitle) ⇒ <code>boolean</code>
+get or set Title
+
+**Kind**: static method of [<code>oneState</code>](#module_oneState)  
+**Returns**: <code>boolean</code> - true on success  
+
+| Param | Type |
 | --- | --- |
-| none | returns time delta in seconds |
+| newTitle | <code>string</code> | 
 
 
 
