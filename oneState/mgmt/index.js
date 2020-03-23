@@ -3,7 +3,7 @@
  * has only one instance
  * @returns {object} a global point of access to it
  */
-export const mgmt = (function() {
+module.exports = (function() {
   let instance;
   /**
    * @param none
@@ -34,14 +34,30 @@ export const mgmt = (function() {
    * create instance
    * @returns {object} new mgmt.instance
    */
+  function addKeyValuePair(obj, stamp = false) {
+    const clone = { ...instance.data };
+    if (!Object.keys(obj).length > 0) {
+      console.log("only {key: value} pairs");
+      return false;
+    }
+    instance.data = { ...clone, ...obj };
+    if (stamp) ts();
+    return true;
+  }
+  /**
+   * @param none
+   * create instance
+   * @returns {object} new mgmt.instance
+   */
   function createInstance() {
     return new Object({
       accessed: 0,
-      text: "simple manager",
+      text: "it's not magic",
       data: {
         created: Date.now()
       },
-      stat: timedelta
+      uptime: timedelta,
+      insert: addKeyValuePair
     });
   }
   return {
