@@ -1,42 +1,24 @@
-function ExampleApp() {
-  const appState = require("./oneState");
-  function start() {
-    return appState.set({ started: "ok" });
-  }
-  function status() {
-    return {
-      title: get("title")(),
-      uptime: `app started: ${appState.uptime().uptime}s`,
-      last: `last updated: ${appState.uptime().last}s`
-    };
-  }
-  function set(obj) {
-    if (Object.keys(obj).filter(k => k === "title").length > 0) {
-      console.log("use setTitle to change the app title.");
-      return false;
-    }
-    return appState.set(obj, true);
-  }
-  function get(name) {
-    return appState.get(name);
-  }
-  function setTitle(newTitle) {
-    if (!newTitle) {
-      console.log("requires a string");
-      return false;
-    }
-    return appState.title(newTitle);
-  }
-  return {
-    status,
-    start,
-    set,
-    get,
-    setTitle
-  };
-}
+const Agent = require("./agent");
 
-let app = ExampleApp();
-// console.log(app.status());
-app.setTitle("Example");
-console.log(app.status());
+const alice = Agent("Alice");
+const bob = Agent("Bob");
+console.log("Example...");
+alice.setTitle("Simple Shared State");
+alice.start();
+bob.start();
+alice.receives(["snickers", "toilet-paper", "water"]);
+console.log(alice.status());
+console.log(bob.status());
+setTimeout(() => {
+  alice.gives("*", bob);
+  console.log(alice.status());
+  console.log(bob.status());
+}, 10000);
+setTimeout(() => {
+  bob.gives("water", alice);
+  console.log(alice.status());
+  console.log(bob.status());
+}, 20000);
+setTimeout(() => {
+  console.log("END");
+}, 30000);
